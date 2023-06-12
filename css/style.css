@@ -1,0 +1,71 @@
+html{
+    /* Always set the the html element to 62.5% */
+    /* this means 1 rem is 10px */
+    font-size: 62.5%; 
+}
+/*Here we have defined our color pallets*/
+/*this colors are i dentified from the design*/
+:root {
+    --color-primary : #2584ff;
+    --color-secondary: #00d9ff;
+    --color-accent : #ff3400;
+    --color-headings: #1b0760;
+    --color-body: #918ca4;
+
+}   
+/*I am gonna set all the font family here so that all the elements inherit it.*/
+body{
+    font-family: inter,Arial, Helvetica, sans-serif;
+    color: var(--color-body);
+    font-size:2.4rem;
+    line-height: 1.5;
+
+
+}
+/*Universal Rule for heading colors*/
+h1, h2, h3 {
+    color: var(--color-headings);
+    margin-bottom: 1rem;
+}
+
+/*Universal Rule for heading fonts(In photoshop px are used as measurements we dont want to use px in our font sizing bcoz they are absolute units*/ 
+h1{
+    /* rem value * size of the html element */
+    /* By default the font size of an Html element is 16px*/
+    /* So we shall have to set our html element size */
+    /* Tip set the tml font size to 62.5% */
+    font-size: 7rem;
+}
+h2{
+    font-size: 4rem;
+}
+h3{
+    font-size: 3rem;
+    /* Again here we use a ruler feature in adobeps to measure the distance between our text en the h3///we do the samething with the h1 en h2 */
+    /* But instead of setting the rule here yet the other headings also share the same rule we shall make it universal for headingd
+    Like how we did for the colors  */
+}
+p{
+    /* Because in of the border collapsing since the value is greater
+    chances are that the browser will set its margin
+    which will interfere with the our h3 margin-button feature. There for we will have to set the margin-top to 0 for perfection */
+    margin-top: 0;
+}
+@media screen and (min-width: 1024) {
+    /* Again this font-sizes are extructed from the design
+    look at the design font-text and then comapare it with
+    you commmon sence to visualise what you are doing */
+    body{
+        font-size: 1.8rem;
+
+    }
+    h1{
+        font-size:8rem;
+    }
+    h2{
+        font-size:4rem;
+    }
+    h3{
+        font-size:2.4rem;
+    }
+}

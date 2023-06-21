@@ -1,6 +1,7 @@
+/* Typograph and colorpallet */
 html{
     /* Always set the the html element to 62.5% */
-    /* this means 1 rem is 10px */
+    /* this means 1 rem is 10px to uplif from the heading*/
     font-size: 62.5%; 
 }
 /*Here we have defined our color pallets*/
@@ -67,5 +68,35 @@ p{
     }
     h3{
         font-size:2.4rem;
+    }
+}
+/* Links */
+
+a{
+    text-decoration: none;
+}
+/* //NOTE//:  This is our mobile version as always start with a mobile design*/
+.link-arrow{
+    color: var(--color-accent);
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.link-arrow::after{
+    content: '-->';
+    margin-left: 5px;
+    transition: margin 0.15s;
+}
+
+.link-arrow:hover::after{
+    margin-left: 10px;
+}
+/* this looks like duplication but the reason to why i did that */
+/* is that i don't want to have one particular place to have all the media query*/
+/* Like as we know media queries are arbituary */
+@media screen and (min-width: 1024px) {
+    .link-arrow{
+        font-size: 1.5rem;
     }
 }

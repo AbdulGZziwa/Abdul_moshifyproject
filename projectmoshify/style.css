@@ -100,3 +100,50 @@ a{
         font-size: 1.5rem;
     }
 }
+
+/* Under the section of badges we gonna use Object Oriented CSS */
+/* So this is gonna be an example of OOC at the same time working on our projects */
+/* .......BADGES.... */
+
+/* badge structure */
+.badge{
+    /* Here we use an fixed value because we don't want it to 
+    change relative to the body-font */
+    border-radius: 20px;
+    font-weight: 600;
+    padding: 0.5rem 2rem;
+    /* we use the nowrap in order to keeep what ever we put inside the badge to stay on a single line  */
+    font-size: 2rem;
+    white-space: nowrap;
+    
+
+}
+/* budge skin */
+
+/* we use to highthens to separate the a block or component
+from the modifier */
+.badge--primary {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.badge--secondary{
+    background: var(--color-secondary);
+    color: #fff;
+}
+
+/* Now lets make rules for the small badges */
+.badge--small{
+    font-size: 1.6rem;
+}
+/* this is a media queri for the big screems desktops and tablets */
+
+@media screen and (min-width:1024) {
+    .badge{
+        font-size: 1.5rem;
+    }
+
+    .badge--small{
+        font-size: 1.2rem;
+    }
+}

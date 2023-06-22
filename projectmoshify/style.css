@@ -147,3 +147,44 @@ from the modifier */
         font-size: 1.2rem;
     }
 }
+
+/* Lists */
+.list{
+    list-style: none;
+    /* to get rid of the padding that is defaultly applied by the browsers */
+    /* i will set the padding left to 0 */
+    padding-left: 0;
+    color:var(--color-headings)
+}
+
+/* this list are laid horizontally but here we shall use the OOCSS */
+/* As we stated already we use -- to separate a component from a modifier */
+.list--inline .list__item{
+    /* using inline-block is a good way because we can apply margin */
+    /* but using just inline it will limit us to applying the margin */
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+.list--tick{
+    /* to insert the picks */
+    list-style-image: url(/images/tick.svg);
+    /* to view the ticks since the list-items are to close to the margin */
+    padding-left: 3rem;
+}
+
+
+.list--tick .list__item{
+    padding-left: 0.5rem;  /*this is to add space between the ticks and the list content*/
+    margin-bottom: 1rem; /*this is to add space between list items at the buttom*/
+
+}
+
+/* this is to apply the padding on the desktop screens of list style and content is small */
+@media screen and (min-width: 1024px) {
+    .list--tick .list__item{
+        padding-left: 0;
+    }
+    
+}
+

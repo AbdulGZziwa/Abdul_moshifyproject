@@ -188,3 +188,49 @@ from the modifier */
     
 }
 
+/* .....ICONS....... */
+/* Icon on bith desktop and mobile design dont change in size */
+/* therefore no media quries when dealing with icons */
+/* therefore its required to use px to keep their size fixed */
+/* size */
+.icon{
+    width: 40px;
+    height: 40px;
+}
+
+
+/* Why are we using the hythen on this selesctor */
+/* this is not a vaiation or a modifier*/
+/* this is entirely new class */
+/* and in BEM we use a hythen to separate multiple words */
+.icon-container{
+    background: #f3f9fa;
+    width: 64px;
+    height: 64px;
+    border-radius: 100px;
+    /* this property to to make our icon flexible */
+    display: inline-flex;
+    /* this last two properties are to alight the icon in the center horizontally anf vertically repectively */
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* NOTE: if you use span, the width and height properties
+have no effect o span element thus remodify your span element and 
+five it a display of inline-block */
+
+/* the reson we dont use inline-block is that we dont want to lne 
+break if we need to put our span element next to another element */
+
+/* But in icon we may want to use inline-flex because the icon
+may be uncentered in the area we have specifies but using inline-flex
+will  */
+
+
+/*....... color / skin...... */
+
+.icon--primary{
+    fill: var(--color-primary);
+}
+/* summary: this is called OOCSS. structure separated from skin */

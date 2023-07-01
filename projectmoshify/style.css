@@ -17,6 +17,10 @@ html{
     --color-accent : #ff3400;
     --color-headings: #1b0760;
     --color-body: #918ca4;
+    /* this 2 updates are for recurring/repeatitive values encoutered during building */
+    --color-border: #ccc;
+    --border-radius: 30px;
+
 
 }   
 /*I am gonna set all the font family here so that all the elements inherit it.*/
@@ -306,4 +310,50 @@ anchor elements are inline  */
     .btn{
         font-size: 1.5rem;
     }
+}
+
+/* .....INPUT IMPLEMETATION.... */
+.input {
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+    color: var(--color-headings);
+    font-size: 2rem;
+    outline: 0;
+    padding: 1.5rem 3.5rem;
+}
+
+::placeholder{
+    color: #cdcdd7;
+}
+
+/* desktop version of inputs */
+@media screen and (min-width: 1024px){
+    .input{
+        font: size 1.5rem;
+    }
+}
+
+/* Rule to combine both the search and the input element */
+.input-group{
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    display: flex;
+}
+
+.input-group .input{
+    border: 0;
+    flex-grow: 1;
+    /* inspect the element and get the best option */
+    /* look at the box in the inspect elements */
+    padding: 1.5rem 1rem;
+}
+
+.input-group .btn{
+    margin: 4px;
+}
+
+.input-group .icon{
+    margin: 4px;
+    margin-top: 1.2rem;
+    margin-left: 1rem;
 }

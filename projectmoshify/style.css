@@ -39,6 +39,7 @@ body{
 h1, h2, h3 {
     color: var(--color-headings);
     margin-bottom: 1rem;
+    line-height: 1.1;
 }
 
 /*Universal Rule for heading fonts(In photoshop px are used as measurements we dont want to use px in our font sizing bcoz they are absolute units*/ 
@@ -690,7 +691,7 @@ anchor elements are inline  */
 }
 .block--skewed-left{
     padding-bottom: calc(var(--padding-vertical) + 4rem);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
 }
 .block__header{
     text-align: center;
@@ -767,5 +768,29 @@ anchor elements are inline  */
 
     .nav__item{
         border: 0;
+    }
+}
+
+/* ......HERO...... */
+
+.hero__tagline{
+    font-size: 2rem;
+    color: #b9c3cf;
+    letter-spacing: 1px;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+.hero__image{
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .hero {
+        margin-top: 0;
+    }
+    .hero__content{
+        text-align: left;
+        align-self: center;
     }
 }

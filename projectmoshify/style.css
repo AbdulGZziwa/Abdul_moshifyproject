@@ -866,3 +866,33 @@ anchor elements are inline  */
     max-width:500px;/* instead of writing a media query here we can set the max width to 500px. The card reamains responsive but it doesnt go more than 500px  */
     margin: 0 auto;
 }
+
+/* feature  */
+.feature{
+    gap: 4rem 2rem;
+}
+.feature__heading{
+    margin: 1rem 0;
+}
+
+.feature p {
+    margin-bottom: 1.5rem;
+}
+
+.feature__image{
+    width: 100%;
+}
+
+/* this code below changes the position of the image and content alternatively 
+  but i have did it manually that is why i have commented out this code */
+
+/* @media screen and (min-width: 768px) {
+    .feature:nth-of-type(even) .feature__content{
+        order: 2;
+    }
+} */
+
+.feature:first-of-type {
+    margin-top: 6rem;
+}
+

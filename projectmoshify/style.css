@@ -5,6 +5,10 @@
     margin: 0;
 }
 /* Typograph and colorpallet */
+::selection{
+    background: var(--color-primary);
+    color: #fff;
+}
 html{
     /* Always set the the html element to 62.5% */
     /* this means 1 rem is 10px to uplif from the heading*/
@@ -54,6 +58,7 @@ h2{
     font-size: 4rem;
 }
 h3{
+    font-weight: 500;
     font-size: 3rem;
     /* Again here we use a ruler feature in adobeps to measure the distance between our text en the h3///we do the samething with the h1 en h2 */
     /* But instead of setting the rule here yet the other headings also share the same rule we shall make it universal for headingd
@@ -168,7 +173,7 @@ from the modifier */
     /* to get rid of the padding that is defaultly applied by the browsers */
     /* i will set the padding left to 0 */
     padding-left: 0;
-    color:var(--color-headings)
+    
 }
 
 /* this list are laid horizontally but here we shall use the OOCSS */
@@ -185,6 +190,7 @@ from the modifier */
     list-style-image: url(/images/tick.svg);
     /* to view the ticks since the list-items are to close to the margin */
     padding-left: 3rem;
+    color:var(--color-headings)
 }
 
 
@@ -714,13 +720,15 @@ anchor elements are inline  */
     color:#7b858b;
 }
 
-.block--dark .block__heading {
+.block--dark h1,
+.block--dark h2,
+.block--dark h3 {
     color: #fff;
 }
 
 .block--skewed-right{
     padding-bottom: calc(var(--padding-vertical) + 4rem);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
 }
 .block--skewed-left{
     padding-bottom: calc(var(--padding-vertical) + 4rem);
@@ -896,3 +904,33 @@ anchor elements are inline  */
     margin-top: 6rem;
 }
 
+/* BLOCK_SHOWCASE */
+
+.block-showcase__image > img{
+    width: 100%;
+}
+@media screen and (min-width:768px) {
+    .block-showcase .grid{
+        grid-template-columns: 50% 50%;
+    }
+    .block-showcase__image{
+        justify-self: end;
+    }
+    .block-showcase__image > img{
+        width: auto;
+        max-width: 700px;
+    }
+   
+}
+
+.block-showcase header{
+    margin-bottom: 6rem;
+}
+
+.block-showcase h3{
+    margin-bottom: 2rem;
+}
+
+.block-showcase ul li {
+    margin-bottom: 4.5rem;
+}

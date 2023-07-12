@@ -736,6 +736,7 @@ anchor elements are inline  */
 }
 .block__header{
     text-align: center;
+    margin-bottom: 4rem;
 }
 
 /* this is a rewusable class not only use in containers. its a max width the content but not the page undestood  */

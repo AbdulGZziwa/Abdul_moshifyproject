@@ -70,7 +70,7 @@ p{
     which will interfere with the our h3 margin-button feature. There for we will have to set the margin-top to 0 for perfection */
     margin-top: 0;
 }
-@media screen and (min-width: 1024) {
+@media screen and (min-width: 1024px) {
     /* Again this font-sizes are extructed from the design
     look at the design font-text and then comapare it with
     you commmon sence to visualise what you are doing */
@@ -156,7 +156,7 @@ from the modifier */
 }
 /* this is a media queri for the big screems desktops and tablets */
 
-@media screen and (min-width:1024) {
+@media screen and (min-width:1024px) {
     .badge{
         font-size: 1.5rem;
     }
@@ -278,7 +278,7 @@ will  */
     cursor: pointer;
     font-size: 1.8rem;
     font-weight: 600;
-    padding: 2rem 3rem;
+    padding: 2rem 4vw;
     text-transform: uppercase;
     white-space: nowrap;
     text-align: center;
@@ -385,7 +385,9 @@ anchor elements are inline  */
     /* inspect the element and get the best option */
     /* look at the box in the inspect elements */
     padding: 1.5rem 2rem;
-    overflow: auto;
+    width: 0;
+    /* but also 
+    overflow: autp; works */
 }
 
 .input-group .btn{
@@ -657,7 +659,9 @@ anchor elements are inline  */
 .callout__content{
     text-align: center;
 }
-
+.callout-signup{
+    transform: translateY(6rem);
+}
 @media screen and (min-width:768px) {
     .callout .grid--1x2 {
         grid-template-columns: 1fr auto;
@@ -668,6 +672,10 @@ anchor elements are inline  */
     .callout .btn{
         justify-self: start;
         margin: 0 2rem;
+    }
+    .callout{
+        max-width: 98rem;
+        margin: auto;
     }
 }
 
@@ -848,8 +856,9 @@ anchor elements are inline  */
 }
 
 .block-domain__prices{
+    color: var(--color-headings);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 6rem);
     font-size: 2rem;
     font-weight: 600;
@@ -939,6 +948,7 @@ anchor elements are inline  */
 /* FOOTER */
 .footer{
     background:#232323 ;
+    padding-top: 10rem;
 }
 
 .footer__section {
